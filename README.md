@@ -26,6 +26,9 @@ This TODO app is a simple command-line based task management application. Users 
     - Enter `delete` to remove a task.
     - Enter `quit` to quit the app.
 
+![TODO](https://github.com/Ritik1431/ToDo-List/assets/94741846/ea507789-4a34-45d7-bf4f-ed868cc2032b)
+
+
 ## Project Structure
 
 ```plaintext
