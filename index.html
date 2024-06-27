@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TODO LIST</title>
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <h1>TODO APP
-        <h3>Enter "List " to show all task.</h3>
-        <h3>Enter "Add" to add a task.</h3>
-        <h3>Enter "Delete" to remove a task.</h3>
-        <h3>Enter "Quit" to quit todo.</h3>
-    </h1>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <input type="text" id="taskInput" placeholder="Add a new task...">
+        <button onclick="addTask()">Add</button>
+        <ul id="taskList"></ul>
+    </div>
     <script src="app.js"></script>
 </body>
+
 </html>

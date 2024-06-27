@@ -1,31 +1,32 @@
-let todo = [];
-let req = prompt("Enter your task");
-while (true) {
-    if (req == "quit")
-    {
-        console.log("quitting the app")
-        break;
+// Function to add a new task
+function addTask() {
+    const taskInput = document.getElementById('taskInput');
+    const task = taskInput.value.trim();
+    
+    if (task === '') {
+        alert('Please enter a task.');
+        return;
     }
-    if (req == "list")
-    {
-        console.log("----------------------");
-        for (data of todo)
-        {
-            console.log(data);
-        }
-        console.log("------------------");
-    }
-    else if (req == "add")
-    {
-        let task = prompt("please Enter the task you want to add.")
-        todo.push(task);
-        console.log("Task added.");
-    } 
-    else if (req == "delete")
-    {
-        let idx = prompt("Enter the task index you want to delete.");
-        todo.slice(idx, 1);
-        console.log("Task Deleted Successfully.");
-        }
-    req = prompt("Enter your task");
+
+    const taskList = document.getElementById('taskList');
+    const li = document.createElement('li');
+    li.textContent = task;
+
+    const deleteBtn = document.createElement('button');
+    deleteBtn.textContent = 'Delete';
+    deleteBtn.className = 'delete';
+    deleteBtn.onclick = function() {
+        taskList.removeChild(li);
+    };
+
+    li.appendChild(deleteBtn);
+    taskList.appendChild(li);
+
+    taskInput.value = '';
+}
+
+// Function to delete a task
+function deleteTask(taskItem) {
+    const taskList = document.getElementById('taskList');
+    taskList.removeChild(taskItem);
 }
